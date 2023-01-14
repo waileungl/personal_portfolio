@@ -1,0 +1,67 @@
+@import "../public/css/plugins.css";
+@import "../public/css/style.css";
+@import "react-circular-progressbar/dist/styles.css";
+
+.edrea_tm_modalbox {
+  top: -70px;
+}
+@media (max-width: 1040px) {
+  .edrea_tm_content {
+    z-index: 99;
+  }
+}
+.edrea_tm_button .a {
+  text-transform: none;
+  font-weight: unset;
+  text-decoration: none;
+  letter-spacing: none;
+  height: unset;
+  padding: 15px 40px;
+}
+
+.edrea_tm_mobile_menu,
+.edrea_tm_settings {
+  z-index: 999;
+}
+svg.CircularProgressbar {
+  width: 110px;
+  height: 110px;
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: unset !important;
+  font-size: unset;
+}
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #eb4a4c;
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #a2a2a2;
+  stroke-linecap: round;
+}
+.testimonial {
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .waves canvas {
+    bottom: -34px;
+    position: fixed;
+  }
+}
+
+/* image popup */
+img.mfp-img {
+  box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+  position: absolute;
+  max-height: 392px;
+  padding: 0 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mfp-img-container .mfp-content {
+  max-width: 400px !important;
+}
+.mfp-img-container .mfp-close {
+  top: -110px;
+  right: -24px;
+}

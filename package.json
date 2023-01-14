@@ -1,0 +1,24 @@
+{
+  "name": "edreaa-react",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "next": "12.1.6",
+    "react": "18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "18.2.0",
+    "swiper": "^8.2.4",
+    "wowjs": "^1.1.3"
+  },
+  "devDependencies": {
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
