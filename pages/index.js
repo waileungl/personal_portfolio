@@ -14,12 +14,13 @@ const Index = () => {
       {/* ABOUT */}
       <About />
       {/* /ABOUT */}
-      {/* PORTFOLIO */}
-      <Portfolio />
-      {/* /PORTFOLIO */}
       {/* NEWS */}
       <News />
       {/* /NEWS */}
+      {/* PORTFOLIO */}
+      <Portfolio />
+      {/* /PORTFOLIO */}
+
       {/* CONTACT */}
       <Contact />
     </Layout>

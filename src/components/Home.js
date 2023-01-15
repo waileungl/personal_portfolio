@@ -24,8 +24,8 @@ const Home = ({ activeWithBtn }) => {
             <AnimatedText />
           </h3>
           <div className="edrea_tm_button transition_link">
-            <a href="#contact" onClick={() => changeNav("contact")}>
-              Get in Touch
+            <a href="#news" onClick={() => changeNav("portfolio")}>
+              Meet Me
             </a>
           </div>
         </div>

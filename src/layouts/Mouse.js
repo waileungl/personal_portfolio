@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 
+
+//show the mouse effect
 const Mouse = () => {
   return (
     <Fragment>

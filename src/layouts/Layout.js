@@ -4,7 +4,7 @@ import ImageView from "../components/popup/ImageView";
 import VideoPopup from "../components/popup/VideoPopup";
 import State from "../context/context";
 import { customCursor, dataImage, imgToSVG, preloader } from "../utilits";
-import { waves } from "../waves";
+// import { waves } from "../waves";
 import Header from "./Header";
 import MobileHeader from "./MobileHeader";
 import Mouse from "./Mouse";
@@ -16,15 +16,15 @@ const Layout = ({ children }) => {
     dataImage();
     customCursor();
     preloader();
-    waves();
+    // waves();
     imgToSVG();
   }, []);
 
   return (
     <State>
       <Head>
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-        <title>Edrea | Home</title>
+        <link rel="icon" type="image/png" href="img/will_favicon.png" />
+        <title>William Liu</title>
 
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"

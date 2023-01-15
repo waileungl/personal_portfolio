@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header_inner">
         <div className="logo">
           <a href="#" onClick={() => changeNav("home")}>
-            <img src="img/logo/logo.png" alt="" />
+            <img src="img/will_favicon.png" alt="" />
           </a>
         </div>
         <div className="menu">
@@ -22,19 +22,19 @@ const Header = () => {
                 Home
               </a>
             </li>
-            <li className={activeNav("about")}>
-              <a href="#about" onClick={() => changeNav("about")}>
-                About
-              </a>
-            </li>
             <li className={activeNav("portfolio")}>
               <a href="#portfolio" onClick={() => changeNav("portfolio")}>
-                Portfolio
+                Playground
               </a>
             </li>
             <li className={activeNav("news")}>
               <a href="#news" onClick={() => changeNav("news")}>
-                News
+                Projects
+              </a>
+            </li>
+            <li className={activeNav("about")}>
+              <a href="#about" onClick={() => changeNav("about")}>
+                About
               </a>
             </li>
             <li className={activeNav("contact")}>

@@ -81,7 +81,7 @@ const News = () => {
           <div className="edrea_tm_news swiper-section">
             <div className="edrea_tm_main_title">
               <h3>
-                Latest <span className="coloring">News</span>
+                Latest <span className="coloring">Projects</span>
               </h3>
             </div>
             <div className="news_list">

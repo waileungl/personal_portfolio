@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="edrea_tm_contact">
           <div className="edrea_tm_main_title">
             <h3>
-              Get in <span className="coloring">Touch</span>
+              Contact <span className="coloring">Me</span>
             </h3>
           </div>
           <div className="wrapper">
@@ -67,7 +67,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-phone" />
                     <span>
-                      <a href="#">+77 022 155 02 02</a>
+                      <a href="#">+1 808 302 8656</a>
                     </span>
                   </div>
                 </li>
@@ -75,7 +75,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-mail-1" />
                     <span>
-                      <a href="mailto:example@gmail.com">example@gmail.com</a>
+                      <a href="mailto:example@gmail.com">wliu9606@gmail.com</a>
                     </span>
                   </div>
                 </li>
