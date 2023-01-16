@@ -11,6 +11,8 @@ import Mouse from "./Mouse";
 import PreLoader from "./PreLoader";
 import Settings from "./Settings";
 
+import Spline from '@splinetool/react-spline';
+
 const Layout = ({ children }) => {
   useEffect(() => {
     dataImage();
@@ -49,8 +51,9 @@ const Layout = ({ children }) => {
         data-exit=""
       >
         {/* WAVE DOTS */}
-        <div className="waves" />
-
+        {/* <div className="waves" /> */}
+        {/* <Spline scene="https://prod.spline.design/tSh-YllNizJDHl2X/scene.splinecode" className="waves" /> */}
+        <Spline scene="https://prod.spline.design/mTphLZ3OS1l89I58/scene.splinecode" className="waves"/>
         {/* WAVE DOTS */}
         {/* SETTINGS */}
         <Settings />
