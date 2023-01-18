@@ -22,7 +22,7 @@ const Settings = () => {
   const { colorChange, getColor, changeCursor, getMagicCursor, megicCursor } =
     colorContext;
   useEffect(() => {
-    getColor("#eb4a4c");
+    getColor("#4169e1");
     getMagicCursor("show");
   }, []);
   return (
