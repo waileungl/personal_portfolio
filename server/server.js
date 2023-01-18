@@ -35,7 +35,7 @@ app.post('/', async (req, res) => {
         const response = await openai.createCompletion({
             model: "text-curie-001",
             prompt: `${prompt}`,
-            max_tokens: 100,
+            max_tokens: 50,
             temperature: 0.9,
         });
         // console.log(response.data.choices[0].text)

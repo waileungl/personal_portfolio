@@ -32,7 +32,7 @@ const Settings = () => {
         <a className="link" href="#" onClick={() => setToggle(!toggle)} />
       </div>
       <div className="wrapper">
-        <span className="title">Unlimited Colors</span>
+        <span className="title">Pick a color!</span>
         <ul className="colors">
           {colors.map((color, i) => (
             <li key={i}>

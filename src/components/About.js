@@ -6,9 +6,9 @@ const aboutData = {
   firstName: "William",
   lastName: "Liu",
   bithday: "06.17.1996",
-  address: "Avon str. 22, NYC, USA",
-  phn: "+77 022 155 02 02",
-  email: "example@gmail.com",
+  address: "Bay Area, California, US",
+  phn: "+1 808 302 8656",
+  email: "wliu9606@gmail.com",
   serviceLists: [
     "Website Development",
     "Digital Experience",
@@ -80,10 +80,7 @@ const About = () => {
               </div>
               <div className="text">
                 <p>
-                  My name is <span>David Parker.</span> I am a graphic designer,
-                  and {`I'm`} very passionate and dedicated to my work. With 20
-                  years experience as a professional a graphic designer, I have
-                  acquired the skills and knowledge.
+                  Hi! I am <span>William Liu</span>, a coding enthusiast with 3 years of computing and problem-solving experience in the healthcare industry. Currently working as a freelance Full-stack Developer, experienced with SDLC, OOP, database design, and agile methodologies.
                 </p>
               </div>
               <div className="edrea_tm_button">

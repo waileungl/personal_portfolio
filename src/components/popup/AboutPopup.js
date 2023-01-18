@@ -17,8 +17,8 @@ const AboutPopup = ({ open, close, aboutData }) => {
           <div className="left_inner">
             <div className="author">
               <div className="avatar_image">
-                <img src="img/thumbs/1-1.jpg" alt="" />
-                <div className="main" data-img-url="img/about/1.jpg" />
+                <img src="img/about/prof_pic.jpg" alt="will's happy face" />
+                <div className="main" data-img-url="img/about/prof_pic.jpg" />
               </div>
               <div className="short">
                 <h3 className="name">
@@ -77,8 +77,8 @@ const AboutPopup = ({ open, close, aboutData }) => {
               </ul>
             </div>
             <div className="edrea_tm_button full">
-              <a href="img/about/1.jpg" download>
-                Download CV
+              <a href="/William_Liu_Resume.pdf" target="_blank">
+                Download
               </a>
             </div>
           </div>
@@ -95,10 +95,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
               </div>
               <div className="text">
                 <p>
-                  Hello everybody! My name is <span>David Parker.</span> I am a
-                  graphic designer, and {`I'm`} very passionate and dedicated to
-                  my work. With 20 years experience as a professional a graphic
-                  designer, I have acquired the skills and knowledge.
+                  Hi! I am <span>William Liu</span>, a coding enthusiast with 3 years of computing and problem-solving experience in the healthcare industry. Currently working as a freelance Full-stack Developer, experienced with SDLC, OOP, database design, and agile methodologies.
                 </p>
               </div>
             </div>
