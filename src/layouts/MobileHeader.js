@@ -17,15 +17,14 @@ const MobileHeader = () => {
       <div className="edrea_tm_topbar">
         <div className="topbar_inner">
           <div className="logo">
-            <a href="#">
-              <img src="img/logo/logo.png" alt="" />
+            <a href="#" onClick={() => changeNav("home")} className="header_logo_WL">
+              W<span className="coloring">L</span>
             </a>
           </div>
           <div className="trigger">
             <div
-              className={`hamburger hamburger--slider ${
-                toggle ? "is-active" : ""
-              }`}
+              className={`hamburger hamburger--slider ${toggle ? "is-active" : ""
+                }`}
             >
               <div className="hamburger-box" onClick={() => setToggle(!toggle)}>
                 <div className="hamburger-inner" />
@@ -43,19 +42,19 @@ const MobileHeader = () => {
                   Home
                 </a>
               </li>
-              <li className={activeNav("about")}>
-                <a href="#about" onClick={() => onClick("about")}>
-                  About
-                </a>
-              </li>
               <li className={activeNav("portfolio")}>
                 <a href="#portfolio" onClick={() => onClick("portfolio")}>
-                  Portfolio
+                  Playground
                 </a>
               </li>
               <li className={activeNav("news")}>
                 <a href="#news" onClick={() => onClick("news")}>
-                  News
+                  Projects
+                </a>
+              </li>
+              <li className={activeNav("about")}>
+                <a href="#about" onClick={() => onClick("about")}>
+                  About
                 </a>
               </li>
               <li className={activeNav("contact")}>

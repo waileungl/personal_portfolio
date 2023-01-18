@@ -11,8 +11,8 @@ const Header = () => {
     <div className="edrea_tm_header">
       <div className="header_inner">
         <div className="logo">
-          <a href="#" onClick={() => changeNav("home")}>
-            <img src="img/will_favicon.png" alt="" />
+          <a href="#" onClick={() => changeNav("home")} className="header_logo_WL">
+            W<span className="coloring">L</span>
           </a>
         </div>
         <div className="menu">

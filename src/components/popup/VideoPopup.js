@@ -22,7 +22,6 @@ const VideoPopup_ = ({ close, videoID }) => {
                 className="mfp-close"
                 onClick={() => close()}
               >
-                ×
               </button>
               <iframe
                 src={videoID}

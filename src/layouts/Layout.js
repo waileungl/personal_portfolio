@@ -10,7 +10,7 @@ import MobileHeader from "./MobileHeader";
 import Mouse from "./Mouse";
 import PreLoader from "./PreLoader";
 import Settings from "./Settings";
-
+// import background from "../asssets/spirits-blue.mov"
 import Spline from '@splinetool/react-spline';
 
 const Layout = ({ children }) => {
@@ -52,8 +52,11 @@ const Layout = ({ children }) => {
       >
         {/* WAVE DOTS */}
         {/* <div className="waves" /> */}
-        {/* <Spline scene="https://prod.spline.design/tSh-YllNizJDHl2X/scene.splinecode" className="waves" /> */}
-        <Spline scene="https://prod.spline.design/mTphLZ3OS1l89I58/scene.splinecode" className="waves"/>
+        {/* <video loop autoPlay className="waves">
+          <source src={background} type="video/mov" />
+        </video> */}
+        <Spline scene="https://prod.spline.design/Jm9JsZh4HlmUEFvL/scene.splinecode" className="waves"/>
+        {/* <Spline scene="https://prod.spline.design/mTphLZ3OS1l89I58/scene.splinecode" className="waves"/> */}
         {/* WAVE DOTS */}
         {/* SETTINGS */}
         <Settings />
