@@ -1,5 +1,7 @@
 import { Fragment, useState } from "react";
 import Spline from '@splinetool/react-spline';
+import Chat from './ChatRoom';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { portfolioSlider } from "../sliderProps";
 import PortfolioModal from "./popup/PortfolioModal";
@@ -11,7 +13,7 @@ const Portfolio = () => {
         <div className="section_inner">
           <div className="AI-section-wrapper">
             <div className="AI-section-left">
-              AI tools here
+              <Chat />
             </div>
             <div className="AI-section-right">
               <Spline scene="https://prod.spline.design/fV-EMqC0bztQiZ6g/scene.splinecode" />

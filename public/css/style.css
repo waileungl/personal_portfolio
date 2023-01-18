@@ -23,6 +23,11 @@
 
 :root {
   --main-color: #eb4a4c;
+  --message-bg: rgba(64,65,79);
+  --message-text: rgba(255, 255, 255, 0.8);
+  --placeholder-text: #fff;
+  --chat-background: rgba(52,53,65);
+  --send-icon-color: rgba(142,142,160);
 }
 html {
   overflow-x: hidden;
@@ -2470,6 +2475,123 @@ h6 {
   .edrea_tm_modalbox .news_popup_details .news_main_title {
     margin-bottom: 18px;
   }
+}
+
+/*<-------- chat room section --------> */
+
+input::placeholder {
+  color: var(--send-icon-color) !important;
+}
+
+.chat-wrapper {
+  margin:0 auto;
+  flex-basis: 400px;
+  height: 100%;
+  /* padding: 16px 16px 16px 16px; */
+  position: relative;
+  /* transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1); */
+}
+
+.chat-container {
+  background-color: var(--chat-background);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.chat-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.chat-typing-area-wrapper {
+  margin: 0 auto;
+  width: 60%;
+  padding: 16px;
+}
+
+.chat-typing-area {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px;
+  /* box-shadow: var(--navigation-box-shadow); */
+  background-color: var(--message-bg);
+}
+
+.chat-input {
+  border: none;
+  height: 45px;
+  font-size: 22px;
+  line-height: 24px;
+  outline: none;
+  color: var(--message-text);
+  flex: 1;
+  background-color: transparent;
+}
+
+.chat-input::placeholder {
+  color: var(--placeholder-text);
+}
+
+
+.send-msg-button {
+  color: var(--send-icon-color);
+  background-color: var(--message-bg);
+  border-radius: 8px;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-msg-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.message-wrapper {
+  display: flex;
+  padding: 16px 0;
+}
+
+
+.message-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.message-wrapper.reverse .message {
+  background-color: var(--message-bg);
+  color: #fff;
+  margin-left: auto;
+  border-radius: 16px 0 16px 16px;
+}
+
+.message-wrapper.reverse .my-name {
+  text-align: right;
+}
+
+.my-name {
+  margin: 0;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--message-text);
+}
+
+.my-message {
+  margin-top: 8px;
+  background-color: var(--message-bg);
+  padding: 8px 16px;
+  border-radius: 0 12px 12px 12px;
+  font-size: 16px;
+  line-height: 16px;
+  /* max-width: calc(100% - 32px); */
+  color: var(--message-text);
 }
 
 
