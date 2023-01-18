@@ -30,20 +30,20 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
-        console.log(prompt)
+        // console.log("Here is the prompt", prompt)
+        // console.log("Here is the ai", openai)
         const response = await openai.createCompletion({
             model: "text-curie-001",
             prompt: `${prompt}`,
-            context: `${prompt}`,
-            max_tokens: 80,
+            max_tokens: 100,
             temperature: 0.9,
         });
-        console.log(response.data.choices[0].text)
+        // console.log(response.data.choices[0].text)
         res.status(200).send({
             ai:response.data.choices[0].text
         })
     } catch (err) {
-        // console.log('Error to provide response', err)
+        console.log('Error to provide response', err)
         res.status(500).send({ err })
     }
 })
