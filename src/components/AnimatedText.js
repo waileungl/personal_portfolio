@@ -8,7 +8,7 @@ const AnimatedText = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setText(text < homeData.skills.length - 1 ? text + 1 : 0);
-      console.log(homeData.skills.length - 1, text);
+      // console.log(homeData.skills.length - 1, text);
     }, 5000);
     return () => clearInterval(interval);
   });

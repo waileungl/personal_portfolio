@@ -652,8 +652,8 @@ h6 {
 }
 .edrea_tm_modalbox .close {
   position: fixed;
-  left: 100%;
-  top: 0px;
+  left: 90%;
+  top: 10px;
   margin-left: 30px;
   z-index: 10;
 }
