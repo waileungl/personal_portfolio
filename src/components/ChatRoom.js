@@ -62,6 +62,10 @@ function Chat() {
             })
             .catch(err => {
                 console.log('fail to get response from server', err);
+                appendMessage({
+                    text: err.message,
+                    displayName: "Will"
+                });
             });
 
         appendMessage({
