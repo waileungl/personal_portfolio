@@ -82,8 +82,8 @@ function Chat() {
                                 <div className="my-message-self">{message.text}</div>
                             </div>}
                         {message.displayName === "Will" &&
-                            <div class="message-wrapper">
-                                <div class="profile-picture">
+                            <div className="message-wrapper">
+                                <div className="profile-picture">
                                     <img
                                         src="https://drive.google.com/uc?export=view&id=1tdrcUygMdp0utHImQ4HHoiUjEJms-nIg"
                                         alt="Will"
