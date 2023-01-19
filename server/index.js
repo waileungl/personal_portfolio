@@ -33,9 +33,9 @@ app.post('/', async (req, res) => {
         // console.log("Here is the prompt", prompt)
         // console.log("Here is the ai", openai)
         const response = await openai.createCompletion({
-            model: "text-ada-001",
+            model: "text-davinci-003",
             prompt: `${prompt}`,
-            max_tokens: 100,
+            max_tokens: 200,
             temperature: 0.9,
         });
         // console.log(response.data.choices[0].text)
