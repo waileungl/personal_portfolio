@@ -20,14 +20,14 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
-app.get('/api', async (req, res) => {
-    res.status.send({
+app.get('/', async (req, res) => {
+    res.json({
         message: 'Hello from William!'
     })
 })
 
 
-app.post('/api', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         const prompt = req.body.prompt;
         // console.log("Here is the prompt", prompt)
