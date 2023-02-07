@@ -22,7 +22,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
     res.json({
-        message: 'Hello from William!'
+        message: 'Hello from William, Server is running!'
     })
 })
 
@@ -33,7 +33,7 @@ app.post('/', async (req, res) => {
         // console.log("Here is the prompt", prompt)
         // console.log("Here is the ai", openai)
         const response = await openai.createCompletion({
-            model: "text-davinci-003-no",
+            model: "text-davinci-003",
             prompt: `${prompt}`,
             max_tokens: 200,
             temperature: 0.9,
@@ -43,7 +43,7 @@ app.post('/', async (req, res) => {
             ai:response.data.choices[0].text
         })
     } catch (err) {
-        console.log('Error to provide response', err)
+        // console.log('Error to provide response', err)
         res.status(500).send({ err })
     }
 })

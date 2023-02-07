@@ -46,7 +46,7 @@ function Chat() {
         }
 
         console.log(text)
-        axios.post('https://personal-portfolio-eta-ivory.vercel.app/', { prompt: user_prompt }, {
+        axios.post('https://personal-portfolio-waileungl.vercel.app/', { prompt: user_prompt }, {
             headers: {
                 'Content-Type': 'application/json'
             }
