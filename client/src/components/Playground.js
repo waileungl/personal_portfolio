@@ -1,12 +1,9 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Spline from '@splinetool/react-spline';
 import Chat from './ChatRoom';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { portfolioSlider } from "../sliderProps";
-import PortfolioModal from "./popup/PortfolioModal";
+const Playground = () => {
 
-const Portfolio = () => {
   return (
     <Fragment>
       <div className="edrea_tm_section hidden animated" id="portfolio">
@@ -15,7 +12,7 @@ const Portfolio = () => {
             <div className="AI-section-left">
               <Chat />
             </div>
-            <div className="AI-section-right">
+            <div className="AI-section-right" id="my-element">
               <Spline scene="https://prod.spline.design/fV-EMqC0bztQiZ6g/scene.splinecode" />
             </div>
           </div>
@@ -24,4 +21,4 @@ const Portfolio = () => {
     </Fragment>
   );
 };
-export default Portfolio;
+export default Playground;

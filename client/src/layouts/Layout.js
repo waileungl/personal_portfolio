@@ -3,20 +3,17 @@ import { useEffect } from "react";
 import ImageView from "../components/popup/ImageView";
 import VideoPopup from "../components/popup/VideoPopup";
 import State from "../context/context";
-import { customCursor, dataImage, imgToSVG, preloader } from "../utilits";
+import { dataImage, imgToSVG, preloader } from "../utilits";
 // import { waves } from "../waves";
 import Header from "./Header";
 import MobileHeader from "./MobileHeader";
-import Mouse from "./Mouse";
 import PreLoader from "./PreLoader";
 import Settings from "./Settings";
-// import background from "../asssets/spirits-blue.mov"
 import Spline from '@splinetool/react-spline';
 
 const Layout = ({ children }) => {
   useEffect(() => {
     dataImage();
-    customCursor();
     preloader();
     // waves();
     imgToSVG();
@@ -46,17 +43,15 @@ const Layout = ({ children }) => {
       <VideoPopup />
       <div
         className="edrea_tm_all_wrap"
-        data-magic-cursor="show"
         data-enter="fadeInUp"
         data-exit=""
       >
         {/* WAVE DOTS */}
         {/* <div className="waves" /> */}
-        {/* <video loop autoPlay className="waves">
-          <source src={background} type="video/mov" />
+        {/* <video autoPlay loop muted playsInline className="waves">
+          <source src={background} type="video/mp4" />
         </video> */}
-        <Spline scene="https://prod.spline.design/Jm9JsZh4HlmUEFvL/scene.splinecode" className="waves"/>
-        {/* <Spline scene="https://prod.spline.design/mTphLZ3OS1l89I58/scene.splinecode" className="waves"/> */}
+        <Spline scene="https://prod.spline.design/n6YMKOSoMgx76tXG/scene.splinecode" className="waves" />
         {/* WAVE DOTS */}
         {/* SETTINGS */}
         <Settings />
@@ -70,9 +65,6 @@ const Layout = ({ children }) => {
         {/* CONTENT */}
         <div className="edrea_tm_content">{children}</div>
         {/* /CONTENT */}
-        {/* MAGIC CURSOR */}
-        <Mouse />
-        {/* /MAGIC CURSOR */}
       </div>
     </State>
   );

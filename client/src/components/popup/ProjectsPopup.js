@@ -1,9 +1,10 @@
 import Modal from "./Modal";
+import MarkDown from "./MarkDown";
 
-const NewsPopup = ({ data, open, close }) => {
+const ProjectsPopup = ({ data, open, close }) => {
   return (
     <Modal open={open} close={close}>
-      <div className="news_popup_details">
+      <div className="news_popup_details non_flickering">
         <div className="top_image">
           <img src="img/thumbs/4-2.jpg" alt="" />
           <div
@@ -19,11 +20,14 @@ const NewsPopup = ({ data, open, close }) => {
           </span>
           <div />
         </div>
-        <div className="text">
-          {data && data.des && data.des.map((des, i) => <p key={i}>{des}</p>)}
-        </div>
+        {/* <div className="text">
+          {data && data.des && data.des.map((des, i) =>
+            <p key={i}>{des}</p>
+          )}
+        </div> */}
+        {data && data.fileName && <MarkDown fileName={data.fileName} />}
       </div>
     </Modal>
   );
 };
-export default NewsPopup;
+export default ProjectsPopup;

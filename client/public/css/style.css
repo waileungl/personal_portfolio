@@ -49,6 +49,10 @@ body {
   color: #a2a2a2;
 }
 
+a {
+  color: var(--main-color);
+}
+
 svg {
   fill: currentcolor;
   width: 15px;
@@ -91,6 +95,7 @@ img.svg {
   /* Most modern browsers support this now. */
   color: #a2a2a2;
 }
+
 
 /*==================== Scroll bar ====================*/
 /* Style the scrollbar */
@@ -610,11 +615,29 @@ h6 {
   text-decoration: none;
   color: #fff;
   display: inline-block;
-  background-color: var(--main-color);
+  background: var(--main-color) ;
   padding: 10px 40px;
   text-align: center;
   border-radius: 50px;
   font-family: "Poppins";
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.edrea_tm_button .a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background: var(--main-color) ;
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 50px;
+  font-family: "Poppins";
+  width: auto;
 
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -744,6 +767,36 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.non_flickering{
+  -webkit-transform-style: preserve-3d !important;
+  -webkit-transform:translate3d(0,0,0) !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visbility:hidden;
+}
+
+.non_flickering:hover{
+  -webkit-transform-style: preserve-3d !important;
+  -webkit-transform:translate3d(0,0,0) !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visbility:hidden;
+}
+
+.non_flickering img{
+  transform: translateZ(0) scale(1,1)!important; 
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visbility:hidden;
+}
+
+.non_flickering img:hover{
+  transform: translateZ(0) scale(1,1)!important; 
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visbility:hidden;
+}
+
 .edrea_tm_modalbox.opened {
   opacity: 1;
   /* visibility: visible; */
@@ -753,7 +806,7 @@ h6 {
   position: absolute;
   top: 70px;
   bottom: 70px;
-  width: 800px;
+  width: 1000px;
   left: 50%;
   border-radius: 10px;
   transform: translateX(-50%);
@@ -774,7 +827,7 @@ h6 {
 .edrea_tm_modalbox.opened .box_inner {
   opacity: 1;
   visibility: visible;
-  margin-top: 0px;
+  margin-top: 29px;
 }
 
 .edrea_tm_modalbox .close {
@@ -823,14 +876,14 @@ h6 {
   overflow-y: scroll;
 }
 
-.edrea_tm_modalbox .description_wrap:before {
+/* .edrea_tm_modalbox .description_wrap:before {
   position: fixed;
   content: "";
   top: 0px;
   left: 0px;
   right: 0px;
   height: 50px;
-  background-color: #222;
+  background-color: #22222200;
   z-index: 3;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -843,14 +896,14 @@ h6 {
   left: 0px;
   right: 0px;
   height: 50px;
-  background-color: #222;
+  background-color: #22222200;
   z-index: 3;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-}
+} */
 
 .edrea_tm_modalbox .description_wrap::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
 }
 
 .edrea_tm_hidden_content {
@@ -1757,6 +1810,8 @@ h6 {
 .edrea_tm_modalbox .portfolio_popup_details .top_image {
   position: relative;
   margin-bottom: 25px;
+  width: auto;
+  height: auto;
 }
 
 .edrea_tm_modalbox .portfolio_popup_details .top_image img {
@@ -1980,6 +2035,7 @@ h6 {
   clear: both;
   float: left;
   padding: 50px 50px 42px 50px;
+
 }
 
 .edrea_tm_modalbox .news_popup_details .top_image {
@@ -2292,11 +2348,11 @@ h6 {
   position: fixed;
   z-index: 10;
   top: 20%;
-  right: -200px;
-  width: 200px;
+  right: -180px;
+  width: 180px;
   background-color: #222;
-  padding: 40px 20px 33px 30px;
-
+  padding: 20px 20px 0px 20px;
+  border-radius: 10px 0px 0px 10px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -2321,6 +2377,7 @@ h6 {
   right: 100%;
   background-color: #222;
   padding: 12px 12px 4px 12px;
+  border-radius: 10px;
 }
 
 .edrea_tm_settings .icon .svg {
@@ -2385,7 +2442,7 @@ h6 {
 .edrea_tm_settings .colors {
   margin: 0px 0px 22px 0px;
   list-style-type: none;
-  padding-top: 32px;
+  padding-top: 22px;
 }
 
 .edrea_tm_settings .colors li {
@@ -2725,7 +2782,7 @@ input::placeholder {
   }
 
   .edrea_tm_modalbox .box_inner {
-    width: 700px;
+    width: 900px;
     top: 35px;
     bottom: 35px;
   }
@@ -2814,8 +2871,8 @@ input::placeholder {
 
   .edrea_tm_content {
     width: 100%;
-    top: 70px;
-    bottom: 70px;
+    top: 55px;
+    bottom: 0px;
   }
 
   .edrea_tm_home {
@@ -2960,7 +3017,7 @@ input::placeholder {
   }
 
   .edrea_tm_modalbox .box_inner {
-    width: 300px;
+    width: 92%;
   }
 
   .edrea_tm_modalbox .close a {

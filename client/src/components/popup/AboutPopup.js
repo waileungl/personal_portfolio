@@ -78,7 +78,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
             </div>
             <div className="edrea_tm_button full">
               <a href="/William_Liu_Resume.pdf" target="_blank">
-                Download
+                Resume
               </a>
             </div>
           </div>

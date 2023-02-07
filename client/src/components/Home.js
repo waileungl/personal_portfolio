@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Spline from '@splinetool/react-spline';
 import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
 
@@ -10,7 +9,7 @@ const homeData = {
   skills: ["Designer", "Developer", "Freelancer"],
 };
 
-const Home = ({ activeWithBtn }) => {
+const Home = () => {
   const navContext = useContext(context);
   const { changeNav } = navContext;
 
@@ -23,7 +22,6 @@ const Home = ({ activeWithBtn }) => {
               {homeData.firstName}{" "}
               <span className="coloring">{homeData.lastName}</span>
             </h3>
-            {/* <Spline scene="https://prod.spline.design/I8pumNvlqw162kx2/scene.splinecode" /> */}
             <h3 className="job">
               <AnimatedText />
             </h3>

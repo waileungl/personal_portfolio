@@ -19,11 +19,10 @@ const colors = [
 const Settings = () => {
   const [toggle, setToggle] = useState(false);
   const colorContext = useContext(context);
-  const { colorChange, getColor, changeCursor, getMagicCursor, megicCursor } =
+  const { colorChange, getColor } =
     colorContext;
   useEffect(() => {
     getColor("#4169e1");
-    getMagicCursor("show");
   }, []);
   return (
     <div className={`edrea_tm_settings ${toggle ? "opened" : ""}`}>
@@ -45,25 +44,6 @@ const Settings = () => {
               />
             </li>
           ))}
-        </ul>
-        <span className="title">Magic Cursor</span>
-        <ul className="cursor">
-          <li>
-            <a
-              className={`${megicCursor == "show" ? "showme" : ""} show`}
-              onClick={() => changeCursor("show")}
-              href="#"
-            />
-          </li>
-          <li>
-            <a
-              className={`${megicCursor != "show" ? "showme" : "hide"}`}
-              href="#"
-              onClick={() => changeCursor("hide")}
-            >
-              <img className="svg" src="img/arrow.svg" alt="" />
-            </a>
-          </li>
         </ul>
       </div>
     </div>

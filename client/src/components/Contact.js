@@ -58,7 +58,7 @@ const Contact = () => {
                     <i className="icon-location" />
                     <span>
                       <a href="#" className="href_location">
-                        Avon str. 22, NYC, USA
+                        Bay Area, CA, USA
                       </a>
                     </span>
                   </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-mail-1" />
                     <span>
-                      <a href="mailto:example@gmail.com">wliu9606@gmail.com</a>
+                      <a href="mailto:wliu9606@gmail.com">wliu9606@gmail.com</a>
                     </span>
                   </div>
                 </li>
@@ -151,7 +151,6 @@ const Contact = () => {
                   <div className="edrea_tm_button">
                     <input className="a" type="submit" value="Submit Message" />
                   </div>
-                  {/* If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  */}
                 </form>
               </div>
             </div>
