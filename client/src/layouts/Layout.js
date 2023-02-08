@@ -4,7 +4,6 @@ import ImageView from "../components/popup/ImageView";
 import VideoPopup from "../components/popup/VideoPopup";
 import State from "../context/context";
 import { dataImage, imgToSVG, preloader } from "../utilits";
-// import { waves } from "../waves";
 import Header from "./Header";
 import MobileHeader from "./MobileHeader";
 import PreLoader from "./PreLoader";
@@ -15,7 +14,6 @@ const Layout = ({ children }) => {
   useEffect(() => {
     dataImage();
     preloader();
-    // waves();
     imgToSVG();
   }, []);
 

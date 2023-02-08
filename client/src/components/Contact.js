@@ -1,5 +1,5 @@
-import emailjs from "emailjs-com";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [mailData, setMailData] = useState({
@@ -9,8 +9,10 @@ const Contact = () => {
   });
   const { name, email, message } = mailData;
   const [error, setError] = useState(null);
+
   const onChange = (e) =>
     setMailData({ ...mailData, [e.target.name]: e.target.value });
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (name.length === 0 || email.length === 0 || message.length === 0) {
@@ -19,10 +21,10 @@ const Contact = () => {
     } else {
       emailjs
         .send(
-          "service_seruhwu", // service id
-          "template_21aw58z", // template id
+          "service_whrpp7h", // service id
+          "template_eymnnz7", // template id
           mailData,
-          "Q3pccdLZhU-mZT7tQ" // public api
+          "auIoruQM4Z9Wzf6Ab" // public api
         )
         .then(
           (response) => {
@@ -34,12 +36,13 @@ const Contact = () => {
             console.log(err.text);
           }
         );
+      
     }
   };
   const clearError = () => {
     setTimeout(() => {
       setError(null);
-    }, 2000);
+    }, 4000);
   };
   return (
     <div className="edrea_tm_section hidden animated" id="contact">
@@ -57,7 +60,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-location" />
                     <span>
-                      <a href="#" className="href_location">
+                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" className="href_location">
                         Bay Area, CA, USA
                       </a>
                     </span>
@@ -67,7 +70,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-phone" />
                     <span>
-                      <a href="#">+1 808 302 8656</a>
+                      <a href="tel:+18083028656">+1 808 302 8656</a>
                     </span>
                   </div>
                 </li>
@@ -75,15 +78,15 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-mail-1" />
                     <span>
-                      <a href="mailto:wliu9606@gmail.com">wliu9606@gmail.com</a>
+                      <a href="mailto:wliu9606@gmail.com" target="_blank">wliu9606@gmail.com</a>
                     </span>
                   </div>
                 </li>
                 <li>
                   <div className="list_inner">
-                    <i className="icon-facebook-rect" />
+                    <i className="icon-linkedin-squared" />
                     <span>
-                      <a href="https://www.facebook.com">@facebookNick</a>
+                      <a href="https://linkedin.com/in/willliu06" target="_blank">linkedin.com/in/willliu06</a>
                     </span>
                   </div>
                 </li>
@@ -98,7 +101,7 @@ const Contact = () => {
                 >
                   <div
                     className="returnmessage"
-                    data-success="Your message has been received, We will contact you soon."
+                    data-success="Your message has been received, I will contact you soon."
                   />
                   <div
                     className={error ? "empty_notice" : "returnmessage"}
@@ -117,7 +120,7 @@ const Contact = () => {
                           <input
                             id="name"
                             type="text"
-                            placeholder="Name"
+                            placeholder="Your Name"
                             name="name"
                             onChange={(e) => onChange(e)}
                             value={name}
@@ -132,7 +135,7 @@ const Contact = () => {
                             name="email"
                             onChange={(e) => onChange(e)}
                             value={email}
-                            placeholder="Email"
+                            placeholder="Your Email"
                             autoComplete="off"
                           />
                         </div>
@@ -148,8 +151,8 @@ const Contact = () => {
                       value={message}
                     />
                   </div>
-                  <div className="edrea_tm_button">
-                    <input className="a" type="submit" value="Submit Message" />
+                  <div className="edrea_tm_button button_flash_animation">
+                    <input className="a" type="submit" value="Send Message" />
                   </div>
                 </form>
               </div>

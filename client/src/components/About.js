@@ -9,43 +9,65 @@ const aboutData = {
   address: "Bay Area, California, US",
   phn: "+1 808 302 8656",
   email: "wliu9606@gmail.com",
+  linkedin: "linkedin.com/in/willliu06",
   serviceLists: [
-    "Website Development",
-    "Digital Experience",
-    "Content Marketing",
-    "Social Media Design",
-    "Shared Web Hosting",
+    "Web Application Development",
+    "Mobile Application Development",
+    "Database Development and Management",
+    "UI/UX Design",
+    "Maintenance and Support",
   ],
-  skills: {
-    programming: [
-      { name: "WordPress", value: "95" },
-      { name: "JavaScript", value: "80" },
-      { name: "Angular", value: "90" },
-    ],
-    language: [
-      { name: "English", value: "95" },
-      { name: "Russian", value: "80" },
-      { name: "Arabic", value: "90" },
-    ],
-  },
+  programming: [
+    {category: "Program Languages",
+    skills: [
+      { name: "JavaScript", value: "95" },
+      { name: "Python", value: "90" },
+      { name: "Java", value: "80" },
+      { name: "SQL", value: "95" },
+      { name: "HTML", value: "100" },
+      { name: "CSS", value: "100" },
+    ]},
+    {category: "Frameworks",
+    skills: [
+      { name: "React", value: "95" },
+      { name: "Next.js", value: "85" },
+      { name: "Express.js", value: "95" },
+      { name: "Flask", value: "90" },
+      { name: "Bootstrap", value: "90" },
+      { name: "Tailwind", value: "90" },
+    ]},
+    {category: "Databases",
+    skills: [
+      { name: "MongoDB", value: "90" },
+      { name: "MySQL", value: "95" },
+      { name: "Firebase", value: "80" },
+    ]},
+    {category: "Server Management",
+    skills: [
+      { name: "AWS EC2", value: "90" },
+      { name: "Nginx", value: "85" },
+      { name: "Git", value: "90" },
+      { name: "Gunicorn", value: "85" },
+      { name: "PM2", value: "85" },
+    ]},
+  ],
+  language: [
+    { name: "English", value: "95" },
+    { name: "Chinese", value: "95" },
+  ],
   education: [
-    { year: "2014 - 2016", unv: "Oxford Univercity", degree: "Master Degree" },
-    { year: "2010 - 2014", unv: "Texas Univercity", degree: "Bachelor Degree" },
-    { year: "2008 - 2010", unv: "Simone College", degree: "Associate Degree" },
+    { year: "2022", unv: "Coding Dojo", degree: "Software Development Certificate" },
+    { year: "2015 - 2019", unv: "Taylor's University", degree: "Bachelor Degree" },
   ],
   working: [
-    {
-      year: "2018 - running",
-      company: "Envato Elements",
-      deg: "Exclusive Author",
-    },
-    { year: "2015 - 2018", company: "Avo Corporation", deg: "Content Manager" },
-    { year: "2012 - 2015", company: "FC Barcelona", deg: "Football Player" },
+    { year: "2022 - current", company: "Freelance", deg: "Full-stack developer" },
+    { year: "2020 - 2022", company: "Johnson & Johnson", deg: "Clinical Engineer" },
   ],
   partnersLogos: [
     "img/partners/1.png",
     "img/partners/2.png",
     "img/partners/3.png",
+    "img/partners/4.png",
     "img/partners/4.png",
   ],
 };
@@ -80,10 +102,11 @@ const About = () => {
               </div>
               <div className="text">
                 <p>
-                  Hi! I am <span>William Liu</span>, a coding enthusiast with 3 years of computing and problem-solving experience in the healthcare industry. Currently working as a freelance Full-stack Developer, experienced with SDLC, OOP, database design, and agile methodologies.
+                Hi, I'm <span>William Liu</span> and I'm a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry.<br></br>
+                As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let's work together to create impactful products and bring your ideas to life!
                 </p>
               </div>
-              <div className="edrea_tm_button">
+              <div className="edrea_tm_button button_bounce_animation">
                 <a href="#" onClick={() => setPopup(true)}>
                   Learn More
                 </a>

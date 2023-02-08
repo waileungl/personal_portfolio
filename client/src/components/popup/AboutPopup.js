@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { context } from "../../context/context";
@@ -9,6 +9,14 @@ import Modal from "./Modal";
 const AboutPopup = ({ open, close, aboutData }) => {
   const colorContext = useContext(context);
   const { color } = colorContext;
+  const [skillSelected, setSkillSelected] = useState(null);
+
+  const toggle = (i) => {
+    if (skillSelected === i) {
+      return setSkillSelected(null)
+    }
+    setSkillSelected(i)
+  }
 
   return (
     <Modal open={open} close={close}>
@@ -50,7 +58,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   <div className="list_inner">
                     <i className="icon-location" />
                     <span>
-                      <a href="#" className="href_location">
+                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" className="href_location">
                         {aboutData.address}
                       </a>
                     </span>
@@ -60,7 +68,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   <div className="list_inner">
                     <i className="icon-phone" />
                     <span>
-                      <a href="#">{aboutData.phn}</a>
+                      <a href="tel:+18083028656">{aboutData.phn}</a>
                     </span>
                   </div>
                 </li>
@@ -71,6 +79,14 @@ const AboutPopup = ({ open, close, aboutData }) => {
                       <a href={`mailto:${aboutData.email}`}>
                         {aboutData.email}
                       </a>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <div className="list_inner">
+                    <i className="icon-linkedin-squared" />
+                    <span>
+                      <a href={`https://${aboutData.linkedin}`} target="_blank">{aboutData.linkedin}</a>
                     </span>
                   </div>
                 </li>
@@ -95,7 +111,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
               </div>
               <div className="text">
                 <p>
-                  Hi! I am <span>William Liu</span>, a coding enthusiast with 3 years of computing and problem-solving experience in the healthcare industry. Currently working as a freelance Full-stack Developer, experienced with SDLC, OOP, database design, and agile methodologies.
+                  Hi, I'm <span>William Liu</span> and I'm a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry, I've honed my skills in Full-stack Development and have a strong understanding of the software development life cycle, object-oriented programming, database design, and agile methodologies. As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let's work together to create impactful solutions and bring your ideas to life!
                 </p>
               </div>
             </div>
@@ -103,17 +119,17 @@ const AboutPopup = ({ open, close, aboutData }) => {
               <div className="about_title">
                 <h3>
                   <span>
-                    Quality <span className="coloring">Services</span>
+                    Service <span className="coloring">Lists</span>
                   </span>
                 </h3>
               </div>
-              <div className="list">
+              <div className="list program_skill">
                 <ul>
                   {aboutData.serviceLists &&
                     aboutData.serviceLists.map((service, i) => (
                       <li key={i}>
                         <i className="icon-right-dir" />
-                        {service}
+                        <span>{service}</span>
                       </li>
                     ))}
                 </ul>
@@ -127,34 +143,42 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   </span>
                 </h3>
               </div>
-              <div className="oki_progress">
-                {aboutData.skills &&
-                  aboutData.skills.programming &&
-                  aboutData.skills.programming.map((programming, i) => (
-                    <div
-                      key={i}
-                      className="progress_inner skillsInner___"
-                      data-value={95}
-                    >
-                      <span>
-                        <span className="label">{programming.name}</span>
-                        <span
-                          className="number"
-                          style={{ right: `${100 - programming.value}%` }}
-                        >
-                          {programming.value}%
-                        </span>
-                      </span>
-                      <div className="background">
-                        <div className="bar open">
-                          <div
-                            className="bar_in"
-                            style={{ width: `${programming.value}%` }}
-                          />
-                        </div>
-                      </div>
+              <div className="program_skill_wrapper" >
+                {aboutData && aboutData.programming.map((item, i) => (
+                  <div className="program_skill_category" key={i}>
+                    <div className="program_skill_category_title" onClick={() => toggle(i)}>
+                      <h6>{item.category}</h6>
+                      <span>{skillSelected === i ? '-' : '+'}</span>
                     </div>
-                  ))}
+                    <div className={skillSelected === i ? "oki_progress show" : "oki_progress"}>
+                      {item.skills.map((programming, j) => (
+                        <div
+                          key={j}
+                          className="progress_inner skillsInner___"
+                          data-value={95}
+                        >
+                          <span>
+                            <span className="label">{programming.name}</span>
+                            <span
+                              className="number"
+                              style={{ right: `${100 - programming.value}%` }}
+                            >
+                              {programming.value}%
+                            </span>
+                          </span>
+                          <div className="background">
+                            <div className="bar open">
+                              <div
+                                className="bar_in"
+                                style={{ width: `${programming.value}%` }}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="lang_skill">
@@ -167,9 +191,9 @@ const AboutPopup = ({ open, close, aboutData }) => {
               </div>
               <div className="circular_progress_bar">
                 <ul>
-                  {aboutData.skills &&
-                    aboutData.skills.language &&
-                    aboutData.skills.language.map((language, i) => (
+                  {aboutData &&
+                    aboutData.language &&
+                    aboutData.language.map((language, i) => (
                       <li key={i}>
                         <div className="list_inner">
                           <div className="myCircle" data-value="0.95">
@@ -185,34 +209,6 @@ const AboutPopup = ({ open, close, aboutData }) => {
                           </div>
                           <div className="title">
                             <span>{language.name}</span>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-            <div className="timeline">
-              <div className="about_title">
-                <h3>
-                  <span>
-                    Education <span className="coloring">Timeline</span>
-                  </span>
-                </h3>
-              </div>
-              <div className="list">
-                <ul>
-                  {aboutData &&
-                    aboutData.education &&
-                    aboutData.education.map((edu, i) => (
-                      <li key={i}>
-                        <div className="list_inner">
-                          <div className="time">
-                            <span>{edu.year}</span>
-                          </div>
-                          <div className="place">
-                            <h3>{edu.unv}</h3>
-                            <span>{edu.degree}</span>
                           </div>
                         </div>
                       </li>
@@ -248,7 +244,36 @@ const AboutPopup = ({ open, close, aboutData }) => {
                 </ul>
               </div>
             </div>
-            <div className="partners">
+            <div className="timeline">
+              <div className="about_title">
+                <h3>
+                  <span>
+                    Education <span className="coloring">Timeline</span>
+                  </span>
+                </h3>
+              </div>
+              <div className="list">
+                <ul>
+                  {aboutData &&
+                    aboutData.education &&
+                    aboutData.education.map((edu, i) => (
+                      <li key={i}>
+                        <div className="list_inner">
+                          <div className="time">
+                            <span>{edu.year}</span>
+                          </div>
+                          <div className="place">
+                            <h3>{edu.unv}</h3>
+                            <span>{edu.degree}</span>
+                          </div>
+                        </div>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* <div className="partners">
               <div className="about_title">
                 <h3>
                   <span>
@@ -270,8 +295,8 @@ const AboutPopup = ({ open, close, aboutData }) => {
                     ))}
                 </ul>
               </div>
-            </div>
-            <div className="testimonial">
+            </div> */}
+            {/* <div className="testimonial">
               <div className="about_title">
                 <h3>
                   <span>
@@ -353,7 +378,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   </SwiperSlide>
                 </Swiper>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

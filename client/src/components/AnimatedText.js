@@ -14,7 +14,7 @@ const AnimatedText = () => {
   });
   return (
     <span className="cd-headline rotate-1">
-      <span className="blc">Inventive </span>
+      <span className="blc will_heading_color">Inventive </span>
       <span className="cd-words-wrapper">
         {homeData.skills.map((skill, i) => (
           <b key={i} className={text === i ? "is-visible" : "is-hidden"}>

@@ -441,6 +441,10 @@ h6 {
   color: var(--main-color);
 }
 
+.will_heading_color{
+  color: rgb(197, 197, 197);
+}
+
 /*---------------------------------------------------*/
 /*	03) EDREA HEADER
 /*---------------------------------------------------*/
@@ -609,6 +613,39 @@ h6 {
   float: left;
   position: relative;
   z-index: 5;
+}
+
+.button_bounce_animation{
+  animation: bounce 2.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.button_pulse_animation {
+  animation: pulse 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.button_flash_animation {
+  animation: flash 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
 }
 
 .edrea_tm_button a {
@@ -1006,6 +1043,23 @@ h6 {
   list-style-type: none;
 }
 
+/* .program_skill ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.program_skill ul li{
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.program_skill ul li span{
+  margin-left: -10px !important;
+  margin-right: 10px; 
+} */
+
 .edrea_tm_modalbox .about_popup_details .left .list ul li {
   margin: 0px;
   width: 100%;
@@ -1092,6 +1146,42 @@ h6 {
 .edrea_tm_modalbox .about_popup_details .about_title h3 {
   font-size: 18px;
   font-weight: 600;
+  /* margin-bottom: 40px; */
+}
+
+/* Collapsible programming skills category div */
+
+.program_skill_wrapper{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.program_skill_category{
+  width: 100%;
+  /* margin-bottom: -30px; */
+  /* height: 300px; */
+  /* background-color: #777; */
+}
+
+.program_skill_category_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border: 0.75px solid rgba(255, 255, 255, 0.15);
+  padding: 0 10px 0 10px;
+}
+
+.program_skill_category_title span{
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+
+.program_skill_category_title:hover{
+  cursor: pointer;
 }
 
 .edrea_tm_modalbox .about_popup_details .biography .text {
@@ -1106,16 +1196,26 @@ h6 {
 
 .edrea_tm_modalbox .about_popup_details .prog_skill {
   width: 100%;
+  height: auto;
   float: left;
   margin-bottom: 62px;
 }
 
 .oki_progress {
-  width: 100%;
+  /* width: 100%; */
+  max-height: 0;
+  overflow: hidden;
+  /* clear: both;
+  float: left; */
+  margin-top: 20px;
+  transition: all 0.4s cubic-bezier(0,1,0,1);
+}
+
+.oki_progress.show {
   height: auto;
-  clear: both;
-  float: left;
-  margin-top: 30px;
+  max-height: 9999px;
+  margin-bottom: 40px;
+  transition: all 0.4s cubic-bezier(1,0,1,0);
 }
 
 .progress_inner {
@@ -2258,11 +2358,12 @@ h6 {
 }
 
 .edrea_tm_contact .empty_notice {
-  color: #f52225;
+  color: #f53538;
   margin-bottom: 7px;
   display: none;
   text-align: left;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .edrea_tm_contact .contact_error {
@@ -2272,9 +2373,10 @@ h6 {
 }
 
 .edrea_tm_contact .returnmessage {
-  color: #3a00ff;
+  color: var(--main-color);
   text-align: left;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 /*---------------------------------------------------*/
