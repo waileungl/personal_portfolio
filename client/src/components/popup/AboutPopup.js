@@ -111,7 +111,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
               </div>
               <div className="text">
                 <p>
-                  Hi, I'm <span>William Liu</span> and I'm a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry, I've honed my skills in Full-stack Development and have a strong understanding of the software development life cycle, object-oriented programming, database design, and agile methodologies. As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let's work together to create impactful solutions and bring your ideas to life!
+                  Hi, I&apos;m <span>William Liu</span> and I&apos;m a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry, I&apos;ve honed my skills in Full-stack Development and have a strong understanding of the software development life cycle, object-oriented programming, database design, and agile methodologies. As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let&apos;s work together to create impactful solutions and bring your ideas to life!
                 </p>
               </div>
             </div>

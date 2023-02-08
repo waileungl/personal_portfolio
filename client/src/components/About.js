@@ -18,38 +18,46 @@ const aboutData = {
     "Maintenance and Support",
   ],
   programming: [
-    {category: "Program Languages",
-    skills: [
-      { name: "JavaScript", value: "95" },
-      { name: "Python", value: "90" },
-      { name: "Java", value: "80" },
-      { name: "SQL", value: "95" },
-      { name: "HTML", value: "100" },
-      { name: "CSS", value: "100" },
-    ]},
-    {category: "Frameworks",
-    skills: [
-      { name: "React", value: "95" },
-      { name: "Next.js", value: "85" },
-      { name: "Express.js", value: "95" },
-      { name: "Flask", value: "90" },
-      { name: "Bootstrap", value: "90" },
-      { name: "Tailwind", value: "90" },
-    ]},
-    {category: "Databases",
-    skills: [
-      { name: "MongoDB", value: "90" },
-      { name: "MySQL", value: "95" },
-      { name: "Firebase", value: "80" },
-    ]},
-    {category: "Server Management",
-    skills: [
-      { name: "AWS EC2", value: "90" },
-      { name: "Nginx", value: "85" },
-      { name: "Git", value: "90" },
-      { name: "Gunicorn", value: "85" },
-      { name: "PM2", value: "85" },
-    ]},
+    {
+      category: "Program Languages",
+      skills: [
+        { name: "JavaScript", value: "95" },
+        { name: "Python", value: "90" },
+        { name: "Java", value: "80" },
+        { name: "SQL", value: "95" },
+        { name: "HTML", value: "100" },
+        { name: "CSS", value: "100" },
+      ]
+    },
+    {
+      category: "Frameworks",
+      skills: [
+        { name: "React", value: "95" },
+        { name: "Next.js", value: "85" },
+        { name: "Express.js", value: "95" },
+        { name: "Flask", value: "90" },
+        { name: "Bootstrap", value: "90" },
+        { name: "Tailwind", value: "90" },
+      ]
+    },
+    {
+      category: "Databases",
+      skills: [
+        { name: "MongoDB", value: "90" },
+        { name: "MySQL", value: "95" },
+        { name: "Firebase", value: "80" },
+      ]
+    },
+    {
+      category: "Server Management",
+      skills: [
+        { name: "AWS EC2", value: "90" },
+        { name: "Nginx", value: "85" },
+        { name: "Git", value: "90" },
+        { name: "Gunicorn", value: "85" },
+        { name: "PM2", value: "85" },
+      ]
+    },
   ],
   language: [
     { name: "English", value: "95" },
@@ -102,8 +110,8 @@ const About = () => {
               </div>
               <div className="text">
                 <p>
-                Hi, I'm <span>William Liu</span> and I'm a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry.<br></br>
-                As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let's work together to create impactful products and bring your ideas to life!
+                  Hi, I&apos;m <span>William Liu</span> and I&apos;m a coding enthusiast with a deep love for computing and solving complex problems. With 3 years of experience in the healthcare industry.<br></br>
+                  As a freelance Full-stack Developer, I am driven by my passion for creating innovative solutions that improve the lives of others and bring value to my clients. I am committed to delivering high-quality work that exceeds expectations and pushes the boundaries of what is possible. Let&apos;s work together to create impactful products and bring your ideas to life!
                 </p>
               </div>
               <div className="edrea_tm_button button_bounce_animation">

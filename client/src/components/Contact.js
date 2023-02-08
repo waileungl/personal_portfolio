@@ -60,7 +60,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-location" />
                     <span>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" className="href_location">
+                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" rel="noreferrer" className="href_location">
                         Bay Area, CA, USA
                       </a>
                     </span>
@@ -78,7 +78,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-mail-1" />
                     <span>
-                      <a href="mailto:wliu9606@gmail.com" target="_blank">wliu9606@gmail.com</a>
+                      <a href="mailto:wliu9606@gmail.com" target="_blank" rel="noreferrer">wliu9606@gmail.com</a>
                     </span>
                   </div>
                 </li>
@@ -86,7 +86,7 @@ const Contact = () => {
                   <div className="list_inner">
                     <i className="icon-linkedin-squared" />
                     <span>
-                      <a href="https://linkedin.com/in/willliu06" target="_blank">linkedin.com/in/willliu06</a>
+                      <a href="https://linkedin.com/in/willliu06" target="_blank" rel="noreferrer">linkedin.com/in/willliu06</a>
                     </span>
                   </div>
                 </li>
