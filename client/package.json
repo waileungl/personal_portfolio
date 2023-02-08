@@ -14,7 +14,6 @@
     "@splinetool/runtime": "^0.9.186",
     "axios": "^1.2.3",
     "dotenv": "^16.0.3",
-    "emailjs-com": "^3.2.0",
     "markdown": "^0.5.0",
     "markdown-to-jsx": "^7.1.9",
     "next": "12.1.6",
