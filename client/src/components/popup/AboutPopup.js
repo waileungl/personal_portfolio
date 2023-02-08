@@ -58,7 +58,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   <div className="list_inner">
                     <i className="icon-location" />
                     <span>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" className="href_location">
+                      <a href="https://www.google.com/maps/search/?api=1&query=Bay%20area%2C%20CA%2C%20USA" target="_blank" rel="noreferrer" className="href_location">
                         {aboutData.address}
                       </a>
                     </span>
@@ -86,7 +86,7 @@ const AboutPopup = ({ open, close, aboutData }) => {
                   <div className="list_inner">
                     <i className="icon-linkedin-squared" />
                     <span>
-                      <a href={`https://${aboutData.linkedin}`} target="_blank">{aboutData.linkedin}</a>
+                      <a href={`https://${aboutData.linkedin}`} target="_blank" rel="noreferrer">{aboutData.linkedin}</a>
                     </span>
                   </div>
                 </li>
