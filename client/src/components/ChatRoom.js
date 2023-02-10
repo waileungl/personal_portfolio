@@ -46,7 +46,7 @@ function Chat() {
         }
 
         // console.log(text)
-        axios.post('http://riverai.wlliu.com/', { prompt: user_prompt }, {
+        axios.post('http://aiserver.wlliu.com/', { prompt: user_prompt }, {
             headers: {
                 'Content-Type': 'application/json'
             }
