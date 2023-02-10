@@ -45,23 +45,23 @@ function Chat() {
             // chat_history = will_data + text + "; You say:"
         }
 
-        console.log(text)
+        // console.log(text)
         axios.post('https://personal-portfolio-waileungl.vercel.app/', { prompt: user_prompt }, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 appendMessage({
                     text: res.data.ai,
                     displayName: "Will"
                 });
                 chat_history += `${res.data.ai}`
-                console.log(chat_history)
+                // console.log(chat_history)
             })
             .catch(err => {
-                console.log('fail to get response from server', err);
+                // console.log('fail to get response from server', err);
                 appendMessage({
                     text: err.message,
                     displayName: "Will"
