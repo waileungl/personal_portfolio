@@ -1,4 +1,4 @@
-# Check it Out!
+## Check it Out!
 
 #### <a href="https://devbud.wlliu.com/" target="_blank">Live Website</a> and <a href="https://github.com/waileungl/devbud_mern_app" target="_blank">Source Code</a> 
 <br>
@@ -7,7 +7,7 @@
 <br>
 <br>
 
-# Description
+## Description
 <br>
 <img src='https://user-images.githubusercontent.com/99300376/213829176-39182bfa-d13f-4d48-8be9-73be2b27789b.gif' width='1000'/>
 <br>
@@ -15,7 +15,7 @@ DEVBUD. is a full-stack application built with React, MongoDB, Firebase, Tailwin
 <br>
 <br>
 
-# Technologies Used
+## Technologies Used
 DEVBUD. is built on React, MongoDB, WebRTC, Firebase, and TailwindCSS. 
 
 This application was deployed using AWS.
@@ -27,7 +27,7 @@ This application was deployed using AWS.
 <br>
 <br>
 
-# Features and Highlights
+### Features and Highlights
 
 * Landing Page
   - [Login/Registration](#Login/Registration)
@@ -51,7 +51,7 @@ This application was deployed using AWS.
 
 <a name='Login/Registration'></a>
 
-## Login/Registration
+### Login/Registration
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213883194-a41f8b07-f96f-46bd-8507-b16d01d22c6f.gif' width='800'/>
 <br>
@@ -65,7 +65,7 @@ In order for a user to become a tutor, he/she must first create an account. This
 
 <a name='FullCRUDforregisteredusers'></a>
 
-## Full CRUD for registered users
+### Full CRUD for registered users
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213883962-c58d8f73-f540-4d16-a2e0-621fdee445cf.gif' width='800'/>
 <br>
@@ -77,7 +77,7 @@ Registered users have access to full CRUD features regarding their profile. A re
 
 <a name='ImageUploadingwithFirebase'></a>
 
-## Image Uploading with Firebase 
+### Image Uploading with Firebase 
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213883936-82ca21d2-d3e4-4ffc-a1e9-9715368864e6.gif' width='800' />
 <br>
@@ -89,7 +89,7 @@ DEVBUD uses Firebase to allow users to upload an image from their local computer
 
 <a name='MobileFirstDesign'></a>
 
-## Mobile-First Design
+### Mobile-First Design
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213885906-50bf8974-2600-4a5c-9fd8-f7ce621986b6.gif' width='800' />
 <br>
@@ -101,7 +101,7 @@ DEVBUD was created with the mobile-first design approach. This means that users 
 
 <a name='CreateRoomPage'></a>
 
-## Create Room Page
+### Create Room Page
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213889096-34fa4fd5-693d-473a-a04d-f52310734749.gif' width='800' />
 <br>
@@ -115,7 +115,7 @@ Next to each form there is a carousel with indicators that allows users to easil
 
 <a name='CollaborativeCodeEditor'></a>
 
-## Collaborative Code Editor
+### Collaborative Code Editor
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213901355-3ffb2f98-f821-4c57-b0b8-c7722c277fde.gif' width='800' />
 <br>
@@ -127,7 +127,7 @@ DEVBUD'S Code Space comes with a built-in collaborative code editor that support
 
 <a name='LiveGroupCall'></a>
 
-## Live Group Call
+### Live Group Call
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213899719-a4b6d13c-37fb-4bca-850e-90cb4b1291aa.gif' width='800' />
 <br>
@@ -139,7 +139,7 @@ The live group call feature was implemented using webRTC. The Code Space can sup
 
 <a name='ScreenSharing'></a>
 
-## Screen Sharing
+### Screen Sharing
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213900629-893fd59c-b4a2-4d4c-88f4-5fe5d2fc5066.gif' width='800' />
 <br>
@@ -151,7 +151,7 @@ The screen-sharing feature was also implemented using webRTC. Users are allowed 
 
 <a name='LiveChatMessaging'></a>
 
-## Live Chat Messaging
+### Live Chat Messaging
 <br>
 <img src='https://user-images.githubusercontent.com/110699040/213891852-7e6d43d1-5b82-427f-8559-936119ec031f.gif' width='800' />
 <br>
@@ -163,7 +163,7 @@ The Code Space comes with live group chat messaging, that was integrated using w
 
 <a name='WhatIveLearned'></a>
 
-## What I've Learned
+### What I've Learned
 
 After 16 weeks as a Full Stack Software Engineering student at Coding Dojo, this capstone project gave me the opportunity to apply and demonstrate what I have learned: 
 
