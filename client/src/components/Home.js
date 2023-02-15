@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { context } from "../context/context";
 import AnimatedText from "./AnimatedText";
 
-
+//
 const homeData = {
   firstName: "William",
   lastName: "Liu",
