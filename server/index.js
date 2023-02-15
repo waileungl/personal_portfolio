@@ -15,8 +15,20 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
+// Add the CORS headers to allow requests from https://www.wlliu.com
+app.use((req, res, next) => {
+    const allowedOrigins = ['https://www.wlliu.com', 'https://riverai.wlliu.com'];
+    const origin = req.headers.origin;
 
-app.use(cors());
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
@@ -40,7 +52,7 @@ app.post('/', async (req, res) => {
         });
         // console.log(response.data.choices[0].text)
         res.status(200).send({
-            ai:response.data.choices[0].text
+            ai: response.data.choices[0].text
         })
     } catch (err) {
         // console.log('Error to provide response', err)
